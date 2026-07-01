@@ -5,7 +5,7 @@
 ![NumPy](https://img.shields.io/badge/Data-NumPy_Financial-success.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Herramienta de escritorio desarrollada en Python para el análisis de viabilidad financiera y valoración de empresas, inspirada en las métricas exigidas en escenarios de inversión como Shark Tank México.
+(Arquitecto Técnico_JMC) Herramienta de escritorio desarrollada en Python para el análisis de viabilidad financiera y valoración de empresas, inspirada en las métricas exigidas en escenarios de inversión como Shark Tank México.
 
 ## 🚀 Características Principales
 
