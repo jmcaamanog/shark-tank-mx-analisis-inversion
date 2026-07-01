@@ -74,7 +74,7 @@ Si no existe, la app carga valores predeterminados y crea el archivo al guardar 
 
 ## ✅ Revisión del código
 
-* El archivo `CODE/008calculadora.py` está estructurado en clases y métodos claros.
+* El archivo `CODE/Shark Tank Mexico.py` está estructurado en clases y métodos claros.
 * Tiene validación de entradas numéricas con soporte para comas y puntos.
 * Crea controles para análisis de datos históricos y escenarios futuros.
 * Genera gráficos que funcionan en modo barras o líneas.
