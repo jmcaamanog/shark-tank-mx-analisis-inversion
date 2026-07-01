@@ -5,41 +5,80 @@
 ![NumPy](https://img.shields.io/badge/Data-NumPy_Financial-success.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-(Arquitecto Técnico_JMC) Herramienta de escritorio desarrollada en Python orientada al análisis de viabilidad financiera y valoración de empresas. Inspirada en las métricas exigidas en escenarios de inversión de capital riesgo (como Shark Tank), permite calcular el rendimiento esperado de una aportación de capital frente a la adquisición de un porcentaje empresarial.
+Herramienta de escritorio desarrollada en Python para el análisis de viabilidad financiera y valoración de empresas, inspirada en las métricas exigidas en escenarios de inversión como Shark Tank México.
 
 ## 🚀 Características Principales
 
-* **Valoración Implícita:** Calcula automáticamente el valor real de la empresa (Post-money) en base a la inversión inicial y el capital cedido.
-* **Métricas Financieras Clave:** Cálculo algorítmico del Valor Actual Neto (VAN), Tasa Interna de Retorno (TIR) y Payback Period sobre los flujos de caja libre o beneficios netos.
-* **Análisis Multi-Escenario:** Proyección de flujos futuros en tres variables simultáneas: Escenario Base, Optimista y Pesimista, aplicando distintas tasas de crecimiento y descuento.
-* **Visualización de Datos:** Generación de gráficos dinámicos integrados (barras y líneas) para comparar visualmente el rendimiento de la empresa vs. la ganancia del inversor a lo largo del tiempo.
-* **Persistencia de Configuración:** Guarda tus preferencias de entorno (moneda, número de decimales y temas claro/oscuro) localmente en un archivo `.json`.
-* **Guía Integrada:** Incluye un glosario y guía de conceptos financieros básicos para inversores novatos.
+* **Evaluación rápida de ofertas:** Mide valoración implícita, porcentaje cedido, porcentaje retenido, múltiplo de ingresos y sugiere contraoferta.
+* **Modos de respuesta personalizados:** Respuestas tipo "emprendedor", "inversionista" o "ambos" para negociar con mayor claridad.
+* **Análisis completo de inversión:** Permite cargar datos históricos y proyectar flujos financieros.
+* **Proyección multi-escenario:** Calcula análisis Base, Optimista y Pesimista con tasas de crecimiento y descuento independientes.
+* **Cálculos financieros estándar:** VAN (Valor Actual Neto), TIR (Tasa Interna de Retorno) y Payback Period de manera automática.
+* **Tablas con resultados:** Desglose anual histórico, múltiplos y flujos proyectados presentados en tablas legibles.
+* **Gráficos dinámicos:** Visualiza resultados en barras o líneas según prefieras.
+* **Configuración persistente:** Guarda símbolo de moneda, decimales, tema de color y modo de apariencia en `settings.json`.
+* **Guía integrada para novatos:** Incluye explicaciones de conceptos clave como VAN, TIR, flujo de caja libre y valoración implícita.
+
+## 🧩 Estructura de la aplicación
+
+La interfaz contiene varias secciones:
+
+* `Inicio`: Explicación rápida y acceso a la evaluación Shark Tank.
+* `Análisis de Inversión`: Datos de inversión, histórico financiero y proyección multi-escenario.
+* `Guía para Novatos`: Glosario de conceptos financieros.
+* `Configuración`: Ajustes de moneda, decimales, apariencia y tema.
+* `Acerca de`: Información del desarrollador y las librerías usadas.
 
 ## 🛠️ Stack Tecnológico
 
-* **CustomTkinter:** Interfaz gráfica moderna, responsive y con soporte nativo para Dark Mode.
-* **NumPy & NumPy-Financial:** Motor matemático para el cálculo de matrices de flujos y funciones financieras complejas (NPV, IRR).
-* **Matplotlib:** Renderizado de gráficos financieros directamente sobre los frames de Tkinter (`FigureCanvasTkAgg`).
-* **Tabulate:** Estructuración y formateo de tablas de resultados históricos y proyectados.
+* **CustomTkinter**: Interfaz moderna con modo claro/oscuro y temas de color.
+* **NumPy**: Operaciones numéricas y soporte de arrays.
+* **NumPy-Financial**: Cálculo de VAN y TIR.
+* **Matplotlib**: Gráficos integrados en la app.
+* **Tabulate**: Formato de tablas para los resultados.
 
-## ⚙️ Instalación y Uso
+## ⚙️ Instalación y Ejecución
 
-1. Clona este repositorio en tu equipo:
+1. Clona el repositorio:
    ```bash
-   git clone [https://github.com/TU_USUARIO/shark-tank-mx-analisis-inversion.git](https://github.com/TU_USUARIO/shark-tank-mx-analisis-inversion.git)
-
-2. Accede a la carpeta del proyecto:
+   git clone https://github.com/TU_USUARIO/shark-tank-mx-analisis-inversion.git
+   ```
+2. Entra en la carpeta del proyecto:
    ```bash
    cd shark-tank-mx-analisis-inversion
-
-3. Instala las dependencias necesarias. Se recomienda usar un entorno virtual:
+   ```
+3. Crea y activa un entorno virtual (recomendado):
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+4. Instala las dependencias:
    ```bash
    pip install customtkinter numpy numpy-financial matplotlib tabulate
-
-4. Ejecuta la aplicación:
+   ```
+5. Ejecuta la aplicación:
    ```bash
-   python 008calculadora.py
+   python CODE\008calculadora.py
+   ```
+
+## 📁 Archivo de configuración
+
+La aplicación usa `settings.json` para guardar:
+
+* símbolo de moneda
+* número de decimales
+* modo de apariencia (`Light`, `Dark`, `System`)
+* tema de color (`blue`, `dark-blue`, `green`)
+
+Si no existe, la app carga valores predeterminados y crea el archivo al guardar la configuración.
+
+## ✅ Revisión del código
+
+* El archivo `CODE/008calculadora.py` está estructurado en clases y métodos claros.
+* Tiene validación de entradas numéricas con soporte para comas y puntos.
+* Crea controles para análisis de datos históricos y escenarios futuros.
+* Genera gráficos que funcionan en modo barras o líneas.
+* Incluye manejo de errores básico para entrada inválida y cálculo de gráficos.
 
 ## 👨‍💻 Autor
 
@@ -49,5 +88,3 @@ Digital Product Lead | ConTech & Digital Twin SaaS | BIM, Energy Modeling & Sust
 Hecho con código y café desde A Coruña. ☕
 
 Jose Manuel Caamaño González | [LinkedIn](https://www.linkedin.com/in/jmcaamanog/)
-
-¡Pégalo en el proyecto y a por el siguiente! Ya tienes un arsenal de herramientas impresionante en tu perfil.
